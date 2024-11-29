@@ -19,10 +19,6 @@ from django.urls import include, path
 from . import views
 
 urlpatterns = [
-  path('admin/', admin.site.urls),
-  path('', views.home),
-  path('recipes', views.recipes),
-  path('ingredients', views.ingredients),
-  path('categories', views.categories),
+  path('api', include('api.urls')),
   path("__reload__/", include("django_browser_reload.urls")),
 ]
